@@ -1,0 +1,1120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Vasundhara Sharma | Acupressure & Vedic Astrology</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    :root {
+        --saffron: #FF6B00;
+        --deep-red: #8B0000;
+        --gold: #FFD700;
+        --cream: #FFFDF5;
+        --dark: #2d2d2d;
+        --white: #ffffff;
+        --transition: all 0.3s ease;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Lato', sans-serif;
+        background-color: var(--cream);
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .hindi-font {
+        font-family: 'Tiro Devanagari Hindi', serif;
+    }
+
+    a {
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-block;
+        border: none;
+        transition: var(--transition);
+        text-align: center;
+    }
+
+    .btn-saffron {
+        background: var(--saffron);
+        color: white;
+    }
+
+    .btn-saffron:hover {
+        background: #e66000;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+    }
+
+    .btn-red {
+        background: var(--deep-red);
+        color: white;
+    }
+
+    .btn-red:hover {
+        background: #a00000;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+    }
+
+    /* Navbar */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 20px 0;
+        transition: var(--transition);
+    }
+
+    nav.scrolled {
+        background: var(--deep-red);
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        color: var(--white);
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-links a {
+        color: var(--white);
+        font-weight: 400;
+        font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+        color: var(--gold);
+    }
+
+    .hamburger {
+        display: none;
+        color: var(--white);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--white);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mandala-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L61 39L100 50L61 61L50 100L39 61L0 50L39 39Z' fill='%23FFD700' fill-opacity='0.4'/%3E%3C/svg%3E");
+        background-size: 150px 150px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+        animation: fadeInUp 1s ease;
+    }
+
+    .hero-content h3 {
+        font-size: 2.2rem;
+        color: var(--gold);
+        margin-bottom: 20px;
+        animation: fadeInUp 1.2s ease;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 35px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        animation: fadeInUp 1.4s ease;
+    }
+
+    .hero-btns {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        animation: fadeInUp 1.6s ease;
+    }
+
+    /* Trust Badges */
+    .trust-badges {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: -60px;
+        position: relative;
+        z-index: 10;
+        padding: 0 20px;
+    }
+
+    .badge-card {
+        background: var(--white);
+        padding: 30px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-bottom: 5px solid var(--gold);
+        transition: var(--transition);
+    }
+
+    .badge-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .badge-card i {
+        font-size: 2.5rem;
+        color: var(--saffron);
+        margin-bottom: 15px;
+    }
+
+    .badge-card h4 {
+        font-size: 1.2rem;
+        color: var(--dark);
+    }
+
+    /* About Section */
+    .about {
+        padding: 100px 0;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about-img {
+        width: 100%;
+        border-radius: 20px;
+        border: 10px solid var(--saffron);
+        box-shadow: 20px 20px 0 var(--gold);
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+        color: var(--deep-red);
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+
+    .highlight-list {
+        list-style: none;
+    }
+
+    .highlight-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+    }
+
+    .highlight-list li i {
+        color: var(--saffron);
+    }
+
+    /* Health Centre */
+    .health {
+        padding: 100px 0;
+        background: #fdf6e3;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--deep-red);
+        margin-bottom: 50px;
+    }
+
+    .health-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .service-card {
+        background: var(--white);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: var(--transition);
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .service-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .service-content {
+        padding: 25px;
+    }
+
+    .service-header {
+        background: var(--deep-red);
+        color: white;
+        padding: 10px 20px;
+        margin: -25px -25px 20px -25px;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .service-list {
+        list-style: none;
+    }
+
+    .service-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .service-list li i {
+        color: var(--saffron);
+        font-size: 0.9rem;
+    }
+
+    /* Astrology Section */
+    .astrology {
+        padding: 100px 0;
+    }
+
+    .astro-banner {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+
+    .astro-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .astro-card {
+        background: var(--white);
+        padding: 40px 20px;
+        text-align: center;
+        border-radius: 15px;
+        border: 1px solid #eee;
+        transition: var(--transition);
+    }
+
+    .astro-card:hover {
+        background: var(--saffron);
+        color: white;
+        transform: translateY(-5px);
+    }
+
+    .astro-card i {
+        font-size: 3rem;
+        color: var(--saffron);
+        margin-bottom: 20px;
+        transition: var(--transition);
+    }
+
+    .astro-card:hover i {
+        color: white;
+    }
+
+    .astro-card h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Pricing Section */
+    .pricing {
+        padding: 100px 0;
+        background: #fdf6e3;
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+        align-items: center;
+    }
+
+    .price-card {
+        background: var(--white);
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        transition: var(--transition);
+    }
+
+    .price-card.popular {
+        border: 3px solid var(--saffron);
+        transform: scale(1.05);
+        z-index: 2;
+    }
+
+    .badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: var(--gold);
+        color: var(--dark);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    .price-card h4 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    .new-price {
+        font-size: 2.5rem;
+        color: var(--deep-red);
+        font-weight: 800;
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+        padding: 100px 0;
+        background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80');
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .testi-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stars {
+        color: var(--gold);
+        margin-bottom: 15px;
+    }
+
+    .testi-card p {
+        font-style: italic;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+    }
+
+    .testi-card span {
+        font-weight: 700;
+        display: block;
+        text-align: right;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 100px 0;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .contact-form {
+        background: var(--white);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-family: inherit;
+    }
+
+    #form-status {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        display: none;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .wa-contact-block {
+        background: #e8f5e9;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        border: 2px dashed #25d366;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wa-contact-block h4 {
+        color: #128c7e;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .wa-contact-block p {
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+        background: var(--deep-red);
+        color: white;
+        padding: 80px 0 30px 0;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .footer-col h4 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--gold);
+    }
+
+    .footer-col p, .footer-col li {
+        margin-bottom: 10px;
+        opacity: 0.9;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+        background: var(--saffron);
+    }
+
+    .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+
+    /* WhatsApp Floating Button */
+    .wa-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        z-index: 9999;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    .wa-float:hover {
+        transform: scale(1.1);
+        background: #1ebe57;
+    }
+
+    .wa-float .tooltip {
+        position: absolute;
+        right: 70px;
+        background: var(--dark);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+    }
+
+    .wa-float:hover .tooltip {
+        opacity: 1;
+    }
+
+    .wa-pulse {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        z-index: -1;
+        animation: pulse 2s infinite;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+        0% { transform: scale(1); opacity: 0.8; }
+        100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+    }
+
+    .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .about-grid, .contact-grid {
+            grid-template-columns: 1fr;
+        }
+        .hero-content h1 { font-size: 3rem; }
+        .hero-content h3 { font-size: 1.8rem; }
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--deep-red);
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-links.active {
+            display: flex;
+        }
+        .hamburger {
+            display: block;
+        }
+        .hero-btns {
+            flex-direction: column;
+            align-items: center;
+        }
+        .price-card.popular {
+            transform: scale(1);
+        }
+    }
+</style>
+</head>
+<body>
+<!-- Sticky Navbar -->
+<nav id="main-nav">
+    <div class="nav-content">
+        <div class="logo hindi-font">Dr. Vasundhara Sharma</div>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#health">Health Centre</a></li>
+            <li><a href="#astrology">Astrology</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="mandala-overlay"></div>
+    <div class="hero-content container">
+        <h1>Dr. Vasundhara Sharma</h1>
+        <h3 class="hindi-font">शरीर और भाग्य का संगम</h3>
+        <p>Blending Acupressure & Naturopathy with Vedic Astrology for a holistic approach to health and happiness.</p>
+        <div class="hero-btns">
+            <a href="#contact" class="btn btn-saffron">Book Appointment</a>
+            <a href="https://wa.me/917974881571?text=Hello%20Dr.%20Vasundhara%2C%20I%20would%20like%20to%20book%20an%20appointment" class="btn btn-red">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Badges -->
+<div class="container">
+    <div class="trust-badges">
+        <div class="badge-card fade-up">
+            <i class="fas fa-award"></i>
+            <h4>20+ Years Experience</h4>
+        </div>
+        <div class="badge-card fade-up">
+            <i class="fas fa-users"></i>
+            <h4>1000+ Happy Patients</h4>
+        </div>
+        <div class="badge-card fade-up">
+            <i class="fas fa-leaf"></i>
+            <h4>100% Natural</h4>
+        </div>
+        <div class="badge-card fade-up">
+            <i class="fas fa-shield-virus"></i>
+            <h4>No Side Effects</h4>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<section class="about container" id="about">
+    <div class="about-grid">
+        <div class="fade-up">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80" alt="Dr. Vasundhara Sharma" class="about-img">
+        </div>
+        <div class="about-text fade-up">
+            <h2>Holistic Healing Expert</h2>
+            <p>Dr. Vasundhara Sharma is a renowned practitioner specializing in the synergy of physical wellness and spiritual guidance. With two decades of expertise, she helps patients find balance through the ancient arts of Acupressure and Vedic Astrology.</p>
+            <ul class="highlight-list">
+                <li><i class="fas fa-check-circle"></i> Certified Naturopathy Expert</li>
+                <li><i class="fas fa-check-circle"></i> Expert in Vedic Kundali Analysis</li>
+                <li><i class="fas fa-check-circle"></i> Dedicated to Drug-Free Recovery</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Health Centre Section -->
+<section class="health" id="health">
+    <div class="container">
+        <h2 class="section-title fade-up">Perfect Health Acupressure & Neuropathic Centre</h2>
+        <div class="health-grid">
+            <!-- Card 1 -->
+            <div class="service-card fade-up">
+                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=400&q=80" alt="Chronic Diseases" class="service-img">
+                <div class="service-header">Chronic Diseases</div>
+                <div class="service-content">
+                    <ul class="service-list">
+                        <li><i class="fas fa-circle-dot"></i> Diabetes मधुमेह</li>
+                        <li><i class="fas fa-circle-dot"></i> Thyroid थायराइड</li>
+                        <li><i class="fas fa-circle-dot"></i> High BP उच्च रक्तचाप</li>
+                        <li><i class="fas fa-circle-dot"></i> Freedom from Medicines</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="service-card fade-up">
+                <img src="https://images.unsplash.com/photo-1519823551278-6d5f756a3f6b?auto=format&fit=crop&w=400&q=80" alt="Pain Management" class="service-img">
+                <div class="service-header">Pain Management</div>
+                <div class="service-content">
+                    <ul class="service-list">
+                        <li><i class="fas fa-circle-dot"></i> Head & Stomach Pain</li>
+                        <li><i class="fas fa-circle-dot"></i> Back & Joint Issues</li>
+                        <li><i class="fas fa-circle-dot"></i> Neuropathic Conditions</li>
+                        <li><i class="fas fa-circle-dot"></i> Bone Health Improvement</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="service-card fade-up">
+                <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=400&q=80" alt="Women's Wellness" class="service-img">
+                <div class="service-header">Women's Wellness</div>
+                <div class="service-content">
+                    <ul class="service-list">
+                        <li><i class="fas fa-circle-dot"></i> Hormonal Imbalances</li>
+                        <li><i class="fas fa-circle-dot"></i> Women's Health Problems</li>
+                        <li><i class="fas fa-circle-dot"></i> Natural Recovery</li>
+                        <li><i class="fas fa-circle-dot"></i> Holistic Care</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Astrology Section -->
+<section class="astrology" id="astrology">
+    <div class="container">
+        <h2 class="section-title fade-up">Sampurna Gyan Jyotish Kendra</h2>
+        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=80" alt="Astrology Banner" class="astro-banner fade-up">
+        <div class="astro-grid">
+            <div class="astro-card fade-up">
+                <i class="fas fa-scroll"></i>
+                <h4>Kundali Reading</h4>
+            </div>
+            <div class="astro-card fade-up">
+                <i class="fas fa-hand-sparkles"></i>
+                <h4>Hastrekha (Palmistry)</h4>
+            </div>
+            <div class="astro-card fade-up">
+                <i class="fas fa-compass"></i>
+                <h4>Vastu Solutions</h4>
+            </div>
+            <div class="astro-card fade-up">
+                <i class="fas fa-om"></i>
+                <h4>Life Guidance</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing" id="pricing">
+    <div class="container">
+        <h2 class="section-title fade-up">Consultation Fees</h2>
+        <div class="pricing-grid">
+            <!-- Price 1 -->
+            <div class="price-card fade-up">
+                <div class="badge">Limited Offer</div>
+                <h4>Kundali Reading</h4>
+                <span class="old-price">₹750</span>
+                <span class="new-price">₹500</span>
+                <a href="https://wa.me/917974881571?text=Hi%2C%20I%20want%20to%20book%20Kundali%20Reading%20at%20%E2%82%B9500" class="btn btn-red" style="width:100%">Book Now</a>
+            </div>
+            <!-- Price 2 -->
+            <div class="price-card fade-up">
+                <div class="badge">Limited Offer</div>
+                <h4>Hastrekha (Palm Reading)</h4>
+                <span class="old-price">₹1000</span>
+                <span class="new-price">₹750</span>
+                <a href="https://wa.me/917974881571?text=Hi%2C%20I%20want%20to%20book%20Hastrekha%20at%20%E2%82%B9750" class="btn btn-red" style="width:100%">Book Now</a>
+            </div>
+            <!-- Price 3 -->
+            <div class="price-card popular fade-up">
+                <div class="badge">Best Value</div>
+                <h4>Kundali + Hastrekha Combo</h4>
+                <span class="old-price">₹1000</span>
+                <span class="new-price">₹750</span>
+                <a href="https://wa.me/917974881571?text=Hi%2C%20I%20want%20to%20book%20Kundali%20%2B%20Hastrekha%20Combo%20at%20%E2%82%B9750" class="btn btn-red" style="width:100%">Book Now</a>
+            </div>
+            <!-- Price 4 -->
+            <div class="price-card fade-up">
+                <div class="badge">50% OFF</div>
+                <h4>Acupressure Session</h4>
+                <span class="old-price">₹1000</span>
+                <span class="new-price">₹500</span>
+                <a href="https://wa.me/917974881571?text=Hi%2C%20I%20want%20to%20book%20Acupressure%20Session%20at%20%E2%82%B9500" class="btn btn-red" style="width:100%">Book Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title fade-up" style="color: white;">Patient Experiences</h2>
+        <div class="testimonial-grid">
+            <div class="testi-card fade-up">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Managed my High BP without medicines. Truly a lifesaver!"</p>
+                <span>— Rajesh Verma, Indore</span>
+            </div>
+            <div class="testi-card fade-up">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Vastu corrections brought amazing energy to my home."</p>
+                <span>— Meena Joshi, Indore</span>
+            </div>
+            <div class="testi-card fade-up">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Accurate palm reading, confident about my career now."</p>
+                <span>— Amit Sharma, Indore</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact container" id="contact">
+    <h2 class="section-title fade-up">Get In Touch</h2>
+    <div class="contact-grid">
+        <div class="contact-form fade-up">
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" placeholder="10-digit mobile number" required>
+                </div>
+                <div class="form-group">
+                    <label>Service Required</label>
+                    <select id="service" required>
+                        <option value="">Select Service</option>
+                        <option value="Acupressure">Acupressure</option>
+                        <option value="Vedic Astrology">Vedic Astrology</option>
+                        <option value="Both">Both</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-red" style="width:100%; font-size: 1.1rem;">Send Request</button>
+                <div id="form-status"></div>
+            </form>
+        </div>
+        <div class="wa-contact-block fade-up">
+            <h4><i class="fab fa-whatsapp"></i> Prefer WhatsApp?</h4>
+            <p>Click below to message Dr. Vasundhara directly — get a reply within minutes!</p>
+            <a href="https://wa.me/917974881571?text=Hello%20Dr.%20Vasundhara%2C%20I%20would%20like%20to%20consult%20you" class="btn btn-red">
+                <i class="fab fa-whatsapp"></i> Message on WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Health Centre</h4>
+                <p>Perfect Health Acupressure & Neuropathic Centre</p>
+                <p>Specializing in chronic disease management and natural neuropathic healing.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Astrology Centre</h4>
+                <p>Sampurna Gyan Jyotish Kendra</p>
+                <p>Providing divine guidance through Kundali, Palmistry, and Vastu Shastra.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> 7974881571</p>
+                <p><i class="fas fa-envelope"></i> vasundhradr09@gmail.com</p>
+                <p><i class="fas fa-location-dot"></i> Indore, Madhya Pradesh</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Dr. Vasundhara Sharma. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/917974881571?text=Hello%20Dr.%20Vasundhara%2C%20I%20would%20like%20to%20book%20an%20appointment" class="wa-float" target="_blank">
+    <div class="wa-pulse"></div>
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">Chat with us!</span>
+</a>
+
+<script>
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('main-nav');
+        if (window.scrollY > 80) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when link clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Intersection Observer for Fade-Up Animation
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-up').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Contact Form Validation & Submission
+    const form = document.getElementById('appointment-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const phone = document.getElementById('phone').value;
+        const phoneRegex = /^[0-9]{10}$/;
+
+        if (!phoneRegex.test(phone)) {
+            status.style.display = 'block';
+            status.style.backgroundColor = '#ffebee';
+            status.style.color = '#c62828';
+            status.innerText = 'Please enter a valid 10-digit phone number.';
+            return;
+        }
+
+        // Simulate success
+        status.style.display = 'block';
+        status.style.backgroundColor = '#e8f5e9';
+        status.style.color = '#2e7d32';
+        status.innerText = 'Request sent successfully! Dr. Vasundhara will contact you soon.';
+        
+        form.reset();
+        
+        setTimeout(() => {
+            status.style.display = 'none';
+        }, 5000);
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
